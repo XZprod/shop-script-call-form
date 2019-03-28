@@ -44,16 +44,12 @@ class shopOrdercalllocFormValidator
         foreach (self::FIELDS_RULES as $field => $rawRules) {
             $value = $this->gv($field);
             if ($value !== null) {
-                if (array_key_exists($field, self::FIELDS_RULES)) {
-                    $rules = explode(',', self::FIELDS_RULES[$field]);
-                    //array_map()
-                    foreach ($rules as $rule) {
-                        $clearValue = $func[$rule]($value, $field);
-                        if ($clearValue === false) {
-                            $this->addError([$field => 'Ошибка заполнения поля']);
-                        } /*else {
-                            $this->addProcessedData([$field => $clearValue]);
-                        }*/
+                $rules = explode(',', self::FIELDS_RULES[$field]);
+                //array_map()
+                foreach ($rules as $rule) {
+                    $clearValue = $func[$rule]($value, $field);
+                    if ($clearValue === false) {
+                        $this->addError([$field => 'Ошибка заполнения поля']);
                     }
                 }
             } else {

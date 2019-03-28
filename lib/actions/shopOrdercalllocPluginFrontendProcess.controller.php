@@ -5,6 +5,7 @@ class shopOrdercalllocPluginFrontendProcessController extends waJsonController
     public function execute()
     {
         $isValidCaptcha = wa()->getCaptcha()->isValid();
+
         if (!$isValidCaptcha) {
             return $this->response['captchaError'] = true;
         }

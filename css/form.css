@@ -1,0 +1,116 @@
+#ordercallloc-form .modal a.close-modal {
+
+}
+
+.gray {
+    color: grey;
+}
+
+.form-req {
+    color: red;
+}
+
+.call-label {
+    color: gray;
+}
+
+#time-range label {
+    position: absolute;
+    width: 20px;
+    margin-left: -10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 5px 0 5px 15px;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: green;
+}
+
+.request-call {
+    margin-top: 5px;
+}
+
+.time-section {
+    height: 105px;
+}
+
+.form-section {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.form-title {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+#comment {
+    width: 100%;
+    resize: none;
+}
+
+.form-submit {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background: limegreen none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-submit:hover {
+    background: limegreen none;
+}
+
+.agreement-link, .agreement-link:visited {
+    color: limegreen;
+}
+
+#ordercallloc-form .ui-slider-horizontal .ui-slider-range {
+    top: 3px;
+    background-color: limegreen;
+    height: 3px;
+    margin-top: 3px;
+}
+
+#ordercallloc-form .ui-widget.ui-widget-content {
+    border: none;
+}
+
+#ordercallloc-form .ui-slider .ui-slider-handle {
+    width: 0.8em;
+    height: 1.7em;
+}
+
+.validation-error {
+    background-color: red;
+    color: white;
+    width: fit-content;
+    padding: 5px 17px;
+    text-align: right;
+    margin-left: auto;
+    border-radius: 10px;
+    display: none;
+    margin-top: 5px;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.captcha-error {
+    display: none;
+}

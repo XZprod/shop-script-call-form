@@ -1,0 +1,62 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<a href="#ordercallloc-form" rel="modal:open">Заказать обратный звонок</a>
+
+<div class="modal" id="ordercallloc-form">
+    <h4 class="request-call">Заказать обратный звонок</h4>
+    <p class="gray">Оставьте свои контакты и мы перезвоним Вам</p>
+    <h4 class="form-title">Контактная информация</h4>
+    <form action="/index.php/shop/ordercall/" id = 'callForm' method="post">
+
+        <div class="form-section">
+            <span class="call-label">Имя <span class="form-req">*</span></span><br>
+            <input type="text" name="name" id="name" class="form-input">
+            <div class="validation-error"></div>
+
+        </div>
+
+        <div class="form-section">
+            <span class="call-label">Телефон <span class="form-req">*</span></span><br>
+            <input type="text" name="phone" id="phone" class="form-input">
+            <div class="validation-error"></div>
+        </div>
+
+        <div class="form-section time-section">
+            <h4 class="form-title mb0">Время для звонка</h4><br>
+            <div id="time-range"></div>
+            <input type="hidden" name="time-from" id="time-from" value="12">
+            <input type="hidden" name="time-to" id="time-to" value="21">
+
+        </div>
+
+        <div class="form-section">
+            <h4 class="form-title mb0">Комментарий</h4><br>
+            <textarea name="comment" id="comment" cols="30" rows="10" class="form-input"></textarea>
+            <div class="validation-error"></div>
+
+        </div>
+<div class="col-md-3"></div>
+        <div class="form-section">
+            {$wa->captcha()}
+            <div class="captcha-error"></div>
+        </div>
+        <div class="form-section">
+            <input type="checkbox" name="agree" id="agree">
+            Согласен на обработку <a href="{$link}" target="_blank" class="agreement-link">персональных данных</a>
+            <div class="validation-error"></div>
+        </div>
+    </form>
+    <button id="request" class="form-submit">Заказать</button>
+</div>
+<script type="text/javascript">
+    {include file = "../js/form.js"}
+</script>
+
+<style>
+    {include file = "../css/form.css"}
+</style>
